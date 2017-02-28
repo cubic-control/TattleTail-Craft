@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ttm",
+  "name": "TattleTail Craft",
+  "description": "Welcome to TattleTail in Minecraft.",
+  "version": "BETA",
+  "mcversion": "1.7.x",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["cubic_control"],
+  "credits": "cubic_control. ArturH14.",
+  "logoFile": "TattleTail-Craft.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

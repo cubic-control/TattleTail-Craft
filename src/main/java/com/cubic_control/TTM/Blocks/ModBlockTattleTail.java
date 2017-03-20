@@ -12,13 +12,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.cubic_control.TTM.CreativeTabs.MCreativeTabs;
-import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_black;
+import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_butternut;
+import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_nightnight;
 import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_blue;
 import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_purple;
-import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_white;
+import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_snowglobe;
 import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_yellow;
 import com.cubic_control.TTM.Items.MItemManager;
 import com.cubic_control.TTM.Lib.RefStrings;
@@ -29,10 +31,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModBlockTattleTail extends ModBlockContainer{
 
 	protected ModBlockTattleTail(String name) {
-		super(Material.cloth, name, 10.0f, "axe", -1, 5.0f, Block.soundTypeCloth);
+		super(Material.cloth, name, 0.0f, null, 0, 0.0f, Block.soundTypeCloth);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		this.setBlockTextureName(RefStrings.MODID + ":" + name);
-		this.setCreativeTab(MCreativeTabs.tabAll);
+		this.setCreativeTab(null);
 		this.setLightOpacity(0);
 		GameRegistry.registerBlock(this, name);
 	}
@@ -44,10 +46,12 @@ public class ModBlockTattleTail extends ModBlockContainer{
 			return new TileEntityTattleTail_yellow();
 		}else if(this == MBlockManager.blue_TattleTail){
 			return new TileEntityTattleTail_blue();
-		}else if(this == MBlockManager.white_TattleTail){
-			return new TileEntityTattleTail_white();
-		}else if(this == MBlockManager.black_TattleTail){
-			return new TileEntityTattleTail_black();
+		}else if(this == MBlockManager.snowglobe_TattleTail){
+			return new TileEntityTattleTail_snowglobe();
+		}else if(this == MBlockManager.nightnight_TattleTail){
+			return new TileEntityTattleTail_nightnight();
+		}else if(this == MBlockManager.butternut_TattleTail){
+			return new TileEntityTattleTail_butternut();
 		}else{
 			return null;
 		}
@@ -68,33 +72,23 @@ public class ModBlockTattleTail extends ModBlockContainer{
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_) {
 		return null;
 	}
-	@Override
-	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {
-        int l = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
-
-        if (l == 0) {
-            world.setBlockMetadataWithNotify(x, y, z, 1, 2);
-        }
-
-        if (l == 1) {
-            world.setBlockMetadataWithNotify(x, y, z, 2, 2);
-        }
-
-        if (l == 2) {
-            world.setBlockMetadataWithNotify(x, y, z, 3, 2);
-        }
-
-        if (l == 3) {
-            world.setBlockMetadataWithNotify(x, y, z, 4, 2);
-        }
-    }
 	
 	public Item getItemDropped(int i1, Random rand, int i2) {
         return this == MBlockManager.purple_TattleTail ? MItemManager.purple_TattleTail : (
         		this == MBlockManager.yellow_TattleTail ? MItemManager.yellow_TattleTail : (
         		this == MBlockManager.blue_TattleTail ? MItemManager.blue_TattleTail : (
-        		this == MBlockManager.white_TattleTail ? MItemManager.white_TattleTail : (
-        		this == MBlockManager.black_TattleTail ? MItemManager.black_TattleTail : Item.getItemFromBlock(this)))));
+        		this == MBlockManager.snowglobe_TattleTail ? MItemManager.snowglobe_TattleTail : (
+        		this == MBlockManager.nightnight_TattleTail ? MItemManager.nightnight_TattleTail : (
+        		this == MBlockManager.butternut_TattleTail ? MItemManager.butternut_TattleTail : Item.getItemFromBlock(this))))));
     }
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z) {
+		return this == MBlockManager.purple_TattleTail ? new ItemStack(MItemManager.purple_TattleTail) : (
+        		this == MBlockManager.yellow_TattleTail ? new ItemStack(MItemManager.yellow_TattleTail) : (
+        		this == MBlockManager.blue_TattleTail ? new ItemStack(MItemManager.blue_TattleTail) : (
+        		this == MBlockManager.snowglobe_TattleTail ? new ItemStack(MItemManager.snowglobe_TattleTail) : (
+        		this == MBlockManager.nightnight_TattleTail ? new ItemStack(MItemManager.nightnight_TattleTail) : (
+        		this == MBlockManager.butternut_TattleTail ? new ItemStack(MItemManager.butternut_TattleTail) : new ItemStack(Item.getItemFromBlock(this)))))));
+	}
 
 }

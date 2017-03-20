@@ -5,6 +5,7 @@ import com.cubic_control.cubic_core.Bases.BaseBlock;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class ModItemBlockPlacer extends ModItem{
@@ -40,6 +41,27 @@ public class ModItemBlockPlacer extends ModItem{
             if(block.canPlaceBlockAt(world, x, y, z)) {
                 --stack.stackSize;
                 world.setBlock(x, y, z, block);
+                int l = MathHelper.floor_double((double)(player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+
+                if (l == 0) {
+                    world.setBlockMetadataWithNotify(x, y, z, 1, 2);
+                    world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+                }
+
+                if (l == 1) {
+                    world.setBlockMetadataWithNotify(x, y, z, 2, 2);
+                    world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+                }
+
+                if (l == 2) {
+                    world.setBlockMetadataWithNotify(x, y, z, 3, 2);
+                    world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+                }
+
+                if (l == 3) {
+                    world.setBlockMetadataWithNotify(x, y, z, 4, 2);
+                    world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+                }
             }
             return true;
         }

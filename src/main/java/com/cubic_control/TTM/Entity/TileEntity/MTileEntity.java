@@ -8,8 +8,12 @@ public class MTileEntity {
 		GameRegistry.registerTileEntity(TileEntityTattleTail_purple.class, "TattleTail_purple");
 		GameRegistry.registerTileEntity(TileEntityTattleTail_yellow.class, "TattleTail_yellow");
 		GameRegistry.registerTileEntity(TileEntityTattleTail_blue.class, "TattleTail_blue");
-		GameRegistry.registerTileEntity(TileEntityTattleTail_white.class, "TattleTail_white");
-		GameRegistry.registerTileEntity(TileEntityTattleTail_black.class, "TattleTail_black");
+		GameRegistry.registerTileEntity(TileEntityTattleTail_snowglobe.class, "TattleTail_snowglobe");
+		GameRegistry.registerTileEntity(TileEntityTattleTail_nightnight.class, "TattleTail_nightnight");
+		GameRegistry.registerTileEntity(TileEntityTattleTail_butternut.class, "TattleTail_butternut");
+		GameRegistry.registerTileEntity(TileEntityMama.class, "Mama");
+		GameRegistry.registerTileEntity(TileEntityPapa.class, "Papa");
+		GameRegistry.registerTileEntity(TileEntityKetchup.class, "Ketchup");
 	}
 
 }

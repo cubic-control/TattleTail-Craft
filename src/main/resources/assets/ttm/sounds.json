@@ -1,0 +1,22 @@
+{
+      "eletric.spark": {
+    "category" : "master",
+    "sounds" : [ "custom/ESPARK1" ]
+    },
+      "mama.cometomama": {
+    "category" : "master",
+    "sounds" : [ "Mama/mama_bark_cometomama" ]
+    },
+      "mama.mamawilllookafteryou": {
+    "category" : "master",
+    "sounds" : [ "Mama/mama_bark_lookafteryou" ]
+    },
+      "mama.mamaslookingafteryou": {
+    "category" : "master",
+    "sounds" : [ "Mama/mama_bark_lookafteryou2" ]
+    },
+      "mama.mamascoming": {
+    "category" : "master",
+    "sounds" : [ "Mama/mama_bark_mamascoming" ]
+    }
+}

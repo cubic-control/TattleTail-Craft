@@ -5,7 +5,10 @@ import com.cubic_control.cubic_core.Bases.BaseBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public abstract class ModBlockContainer extends BaseBlock implements ITileEntityProvider{
@@ -31,6 +34,30 @@ public abstract class ModBlockContainer extends BaseBlock implements ITileEntity
         super.onBlockEventReceived(p_149696_1_, p_149696_2_, p_149696_3_, p_149696_4_, p_149696_5_, p_149696_6_);
         TileEntity tileentity = p_149696_1_.getTileEntity(p_149696_2_, p_149696_3_, p_149696_4_);
         return tileentity != null ? tileentity.receiveClientEvent(p_149696_5_, p_149696_6_) : false;
+    }
+    @Override
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {
+        int l = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+
+        if (l == 0) {
+            world.setBlockMetadataWithNotify(x, y, z, 1, 2);
+            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+        }
+
+        if (l == 1) {
+            world.setBlockMetadataWithNotify(x, y, z, 2, 2);
+            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+        }
+
+        if (l == 2) {
+            world.setBlockMetadataWithNotify(x, y, z, 3, 2);
+            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+        }
+
+        if (l == 3) {
+            world.setBlockMetadataWithNotify(x, y, z, 4, 2);
+            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+        }
     }
 
 }

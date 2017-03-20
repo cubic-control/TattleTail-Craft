@@ -16,6 +16,8 @@ public class MConfig extends Configuration{
 	public static Configuration config;
 	
 	public static boolean doesTattleEffect = false;
+	public static boolean doesMamaLayEggs = false;
+	public static boolean doesPapaLayEggs = false;
 
 	/**
 	 * Creates Config file in custom folder in .minecraft folder.
@@ -50,6 +52,8 @@ public class MConfig extends Configuration{
 	public static void addBooleans(){
 		config.getCategory(ConfigTypes.BOOLEANS);
 		doesTattleEffect = config.getBoolean("doesTattleEffect", ConfigTypes.BOOLEANS, false, "makes tattleTail give player effects depending on color.");
+		doesMamaLayEggs = config.getBoolean("doesMamaLayEggs", ConfigTypes.BOOLEANS, false, "makes Mama lay mystery eggs.");
+		doesPapaLayEggs = config.getBoolean("doesPapaLayEggs", ConfigTypes.BOOLEANS, false, "makes Papa lay mystery eggs.");
 	}
 	
 	public static void addInts(){

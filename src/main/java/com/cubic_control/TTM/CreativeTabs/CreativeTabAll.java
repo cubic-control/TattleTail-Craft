@@ -13,7 +13,7 @@ public class CreativeTabAll extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return MItemManager.rechargable_flashlight_blue;
+		return MItemManager.purple_TattleTail;
 	}
 
 }

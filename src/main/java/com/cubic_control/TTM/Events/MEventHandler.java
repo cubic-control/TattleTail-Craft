@@ -9,7 +9,6 @@ public class MEventHandler {
 		FMLCommonHandler.instance().bus().register(new MEventFlashlight());
 		MinecraftForge.EVENT_BUS.register(new MEventTattleTail());
 		FMLCommonHandler.instance().bus().register(new MEventWelcomeMessage());
-		MinecraftForge.EVENT_BUS.register(new MEventTattleTailDropped());
 		FMLCommonHandler.instance().bus().register(new MEventUpdateChecker());
 	}
 

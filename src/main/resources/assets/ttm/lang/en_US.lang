@@ -1,0 +1,52 @@
+//Items
+item.purple_TattleTail.name=Purple TattleTail
+item.yellow_TattleTail.name=Yellow TattleTail
+item.blue_TattleTail.name=Blue TattleTail
+item.snowglobe_TattleTail.name=Snowglobe TattleTail
+item.nightnight_TattleTail.name=Nightnight TattleTail
+item.butternut_TattleTail.name=Butternut TattleTail
+item.rechargeable_flashlight_blue.name=Rechargeable Flashlight
+item.rechargeable_flashlight_gold.name=Golden Rechargeable Flashlight
+item.mystery_egg.name=Mystery Egg
+item.mama_TattleTail.name=Mama TattleTail
+    //Mystery Egg Drops
+item.Bandage.name=Bandage
+item.Broken Crayon.name=Broken Crayon
+item.Car Key.name=Car Key
+item.Chewed Dog Food.name=Chewed Dog Food
+item.Christmas Light.name=Christmas Light
+item.Cupcake Wrapper.name=Cupcake Wrapper
+item.Dead Beetle.name=Dead Beetle
+item.Doll Hair.name=Doll Hair
+item.Dust Bunny.name=Dust Bunny
+item.Fingernail Clipping.name=Fingernail Clipping
+item.French Fry.name=French Fry
+item.HairBall.name=HairBall
+item.Ketchup.name=Ketchup
+item.Loose Change.name=Loose Change
+item.Lost Earring.name=Lost Earring
+item.Missing Sock.name=Missing Sock
+item.Old Napkin.name=Old Napkin
+item.Peanut Shells.name=Peanut Shells
+item.Pencil Shavings.name=Pencil Shavings
+item.Rabbit's Foot.name=Rabbit's Foot
+item.Seashells Soap.name=Seashells Soap
+item.Used Bandage.name=Used Bandage
+
+item.spawn_egg_mama.name=Spawn Mama
+
+//Blocks
+tile.TattleTail_purple.name=Purple TattleTail Block
+tile.TattleTail_yellow.name=Yellow TattleTail Block
+tile.TattleTail_blue.name=Blue TattleTail Block
+tile.TattleTail_snowglobe.name=Snowglobe TattleTail Block
+tile.TattleTail_nightnight.name=Nightnight TattleTail Block
+tile.TattleTail_butternut.name=Butternut TattleTail Block
+tile.TattleTail_mama.name=Mama TattleTail Block
+tile.Ketchup_block.name=Ketchup
+
+//CreativeTabs
+itemGroup.tabAll=TattleTail-Craft
+
+//Entity
+entity.ttm.Mama.name=Mama

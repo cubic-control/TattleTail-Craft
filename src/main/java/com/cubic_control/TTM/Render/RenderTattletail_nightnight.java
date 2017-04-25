@@ -3,7 +3,7 @@ package com.cubic_control.TTM.Render;
 import org.lwjgl.opengl.GL11;
 
 import com.cubic_control.TTM.Lib.RefStrings;
-import com.cubic_control.TTM.Models.ModelTattletail;
+import com.cubic_control.TTM.Models.ModelNewTattletail;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.model.ModelBase;
@@ -20,7 +20,7 @@ public class RenderTattletail_nightnight extends TileEntitySpecialRenderer{
 	protected static ResourceLocation texture;
 	
 	public RenderTattletail_nightnight(){
-		model = new ModelTattletail();
+		model = new ModelNewTattletail();
 		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/m_nightnight_T.png");
 	}
 	

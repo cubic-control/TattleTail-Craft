@@ -1,15 +1,25 @@
 //Items
+    //Originals
+        //TattleTails
 item.purple_TattleTail.name=Purple TattleTail
 item.yellow_TattleTail.name=Yellow TattleTail
 item.blue_TattleTail.name=Blue TattleTail
 item.snowglobe_TattleTail.name=Snowglobe TattleTail
 item.nightnight_TattleTail.name=Nightnight TattleTail
 item.butternut_TattleTail.name=Butternut TattleTail
+        //Mammas
+item.mama_TattleTail.name=Mama TattleTail
+        //Miscellaneous
 item.rechargeable_flashlight_blue.name=Rechargeable Flashlight
 item.rechargeable_flashlight_gold.name=Golden Rechargeable Flashlight
 item.mystery_egg.name=Mystery Egg
-item.mama_TattleTail.name=Mama TattleTail
-    //Mystery Egg Drops
+item.ritual.name=Ritual
+item.candles.name=Candles
+item.mama_story_disc.name=Mama Story Disc
+item.record.mama_story_disc.desc=
+item.cupcakes.name=Cupcakes
+item.present.name=Present
+        //Mystery Egg Drops
 item.Bandage.name=Bandage
 item.Broken Crayon.name=Broken Crayon
 item.Car Key.name=Car Key
@@ -34,6 +44,26 @@ item.Seashells Soap.name=Seashells Soap
 item.Used Bandage.name=Used Bandage
 
 item.spawn_egg_mama.name=Spawn Mama
+    //Custom
+item.cPresent.name=Present
+        //TattleTails
+item.bendy_TattleTail.name=Bendy TattleTail
+item.beta_TattleTail.name=Beta TattleTail
+item.candy_corn_TattleTail.name=Candy Corn TattleTail
+item.cubic_TattleTail.name=Cubic TattleTail
+item.dark_TattleTail.name=Dark TattleTail
+item.demonic_TattleTail.name=Demonic TattleTail
+item.fairy_TattleTail.name=Fairy TattleTail
+item.freddy_TattleTail.name=Freddy Fazbear TattleTail
+item.girrafe_TattleTail.name=Girrafe TattleTail
+item.lol_TattleTail.name=Lolbit TattleTail
+item.neighbor_TattleTail.name=Neighbor TattleTail
+item.pumpkin_TattleTail.name=Pumpkin TattleTail
+item.red_TattleTail.name=Red TattleTail
+item.scott_TattleTail.name=Scott Cawthon TattleTail
+item.shadow_TattleTail.name=Shadow TattleTail
+item.spring_TattleTail.name=Springtrap TattleTail
+item.withered_TattleTail.name=Withered Purple TattleTail
 
 //Blocks
 tile.TattleTail_purple.name=Purple TattleTail Block
@@ -46,7 +76,8 @@ tile.TattleTail_mama.name=Mama TattleTail Block
 tile.Ketchup_block.name=Ketchup
 
 //CreativeTabs
-itemGroup.tabAll=TattleTail-Craft
+itemGroup.ttm:tabOriginal=TattleTail-Craft:Original
+itemGroup.ttm:tabCustom=TattleTail-Craft:Custom
 
 //Entity
 entity.ttm.Mama.name=Mama

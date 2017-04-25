@@ -7,7 +7,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.cubic_control.TTM.Items.ModItemRechargeableFlashlight;
-import com.cubic_control.cubic_core.Utils.ModUtils;
+import com.cubic_control.cubic_core.Utils.CubicUtils;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
@@ -27,7 +27,7 @@ public class MEventFlashlight {
 				
 					if(mop != null){
 						if(stack == player.getItemInUse()){
-							ModUtils.addLightToMOP(world, mop, player);
+							CubicUtils.addLightToMOP(world, mop, player);
 						}
 					}
 				}

@@ -17,7 +17,7 @@ public class MEventWelcomeMessage {
     		EnumChatFormatting.DARK_PURPLE+"]:"+EnumChatFormatting.RED+" Welcome "+
     		event.player.getDisplayName()+" to "+EnumChatFormatting.YELLOW+RefStrings.NAME+
     		EnumChatFormatting.DARK_PURPLE+":"+EnumChatFormatting.RED+" The TattleTail Mod!"+
-    		EnumChatFormatting.WHITE+EnumChatFormatting.ITALIC+" This mod is © 2017 by cubic_control."));
+    		EnumChatFormatting.WHITE+EnumChatFormatting.ITALIC+" This mod is copyright 2017 by cubic_control."));
     }
 
 }

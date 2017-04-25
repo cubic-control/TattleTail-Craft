@@ -32,7 +32,7 @@ public class ModBlockTattleTail extends ModBlockContainer{
 
 	protected ModBlockTattleTail(String name) {
 		super(Material.cloth, name, 0.0f, null, 0, 0.0f, Block.soundTypeCloth);
-		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.5F, 1.0F);
 		this.setBlockTextureName(RefStrings.MODID + ":" + name);
 		this.setCreativeTab(null);
 		this.setLightOpacity(0);

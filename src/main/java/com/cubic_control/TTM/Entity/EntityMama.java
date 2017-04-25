@@ -8,6 +8,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAIFleeSun;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
@@ -51,7 +52,7 @@ public class EntityMama extends EntityMob{
 		this.getNavigator().setCanSwim(false);
 		this.getNavigator().setEnterDoors(true);
 		this.tasks.addTask(0, new EntityAIStalking(this));
-		
+		this.tasks.addTask(1, new EntityAIFleeSun(this, 1.2D));
 		this.tasks.addTask(2, new EntityAIAttackOnCollide(this, 1.0D, false));
 		this.tasks.addTask(3, new EntityAIRestrictOpenDoor(this));
         this.tasks.addTask(4, new EntityAIOpenDoor(this, true));
@@ -151,16 +152,6 @@ public class EntityMama extends EntityMob{
         return this.teleportTo(d0, d1, d2);
     }
 	
-	protected boolean teleportToEntity(Entity par1Entity) {
-        Vec3 vec3 = this.worldObj.getWorldVec3Pool().getVecFromPool(this.posX - par1Entity.posX, this.boundingBox.minY + (double)(this.height / 2.0F) - par1Entity.posY + (double)par1Entity.getEyeHeight(), this.posZ - par1Entity.posZ);
-        vec3 = vec3.normalize();
-        double d0 = 16.0D;
-        double d1 = this.posX + (this.rand.nextDouble() - 0.5D) * 8.0D - vec3.xCoord * d0;
-        double d2 = this.posY + (double)(this.rand.nextInt(16) - 8) - vec3.yCoord * d0;
-        double d3 = this.posZ + (this.rand.nextDouble() - 0.5D) * 8.0D - vec3.zCoord * d0;
-        return this.teleportTo(d1, d2, d3);
-    }
-	
 	protected boolean teleportTo(double par1, double par3, double par5) {
         EnderTeleportEvent event = new EnderTeleportEvent(this, par1, par3, par5, 0);
         if(MinecraftForge.EVENT_BUS.post(event)){
@@ -220,18 +211,14 @@ public class EntityMama extends EntityMob{
     }
 	@Override
 	public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
-		if (this.isEntityInvulnerable()) {
-            return false;
-        }else{
-        	if(par1DamageSource instanceof EntityDamageSource && par1DamageSource.getEntity() instanceof EntityPlayer) {
-				if(this.teleportRandomly()) {
-                	return true;
-            	}
+        if(par1DamageSource instanceof EntityDamageSource && par1DamageSource.getEntity() instanceof EntityLivingBase) {
+			if(this.teleportRandomly()) {
+                return true;
+            }
 				
-				return super.attackEntityFrom(par1DamageSource, par2);
-        	}else{
-        		return super.attackEntityFrom(par1DamageSource, par2);
-        	}
+			return super.attackEntityFrom(par1DamageSource, par2);
+        }else{
+        	return super.attackEntityFrom(par1DamageSource, par2);
         }
 	}
 	@Override
@@ -239,39 +226,12 @@ public class EntityMama extends EntityMob{
         if (this.isWet()){
             this.attackEntityFrom(DamageSource.drown, 1.0F);
         }
-
-        //if (this.worldObj.isDaytime() && !this.worldObj.isRemote) {
-            //float f = this.getBrightness(1.0F);
-
-            //if (f > 0.5F && this.worldObj.canBlockSeeTheSky(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) && this.rand.nextFloat() * 30.0F < (f - 0.4F) * 2.0F) {
-                //this.entityToAttack = null;
-                //this.teleportRandomly();
-            //}
-        //}
-
-        if (this.isWet() || this.isBurning()) {
-            this.teleportRandomly();
-        }
-
-        if (this.entityToAttack != null) {
-            this.faceEntity(this.entityToAttack, 100.0F, 100.0F);
-        }
-
-        //if (!this.worldObj.isRemote && this.isEntityAlive()) {
-            //if (this.entityToAttack != null) {
-                //if (this.entityToAttack instanceof EntityPlayer) {
-                    //if (this.entityToAttack.getDistanceSqToEntity(this) < 16.0D) {
-                        //this.teleportRandomly();
-                    //}
-                //}
-            //}
-        //}
         
     	if (!this.worldObj.isRemote && --this.timeUntilNextEgg <= 0) {
     		if(MConfig.doesMamaLayEggs){
     			this.dropItem(MItemManager.mystery_egg, 1);
-            	this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
     		}
+    		this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
         }
 
         super.onLivingUpdate();

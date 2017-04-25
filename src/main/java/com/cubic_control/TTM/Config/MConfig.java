@@ -17,7 +17,8 @@ public class MConfig extends Configuration{
 	
 	public static boolean doesTattleEffect = false;
 	public static boolean doesMamaLayEggs = false;
-	public static boolean doesPapaLayEggs = false;
+	public static boolean tattleTextMode = false;
+	public static int vaseDropCandlesChance = 25;
 
 	/**
 	 * Creates Config file in custom folder in .minecraft folder.
@@ -52,12 +53,13 @@ public class MConfig extends Configuration{
 	public static void addBooleans(){
 		config.getCategory(ConfigTypes.BOOLEANS);
 		doesTattleEffect = config.getBoolean("doesTattleEffect", ConfigTypes.BOOLEANS, false, "makes tattleTail give player effects depending on color.");
-		doesMamaLayEggs = config.getBoolean("doesMamaLayEggs", ConfigTypes.BOOLEANS, false, "makes Mama lay mystery eggs.");
-		doesPapaLayEggs = config.getBoolean("doesPapaLayEggs", ConfigTypes.BOOLEANS, false, "makes Papa lay mystery eggs.");
+		doesMamaLayEggs = config.getBoolean("doesMamaLayEggs", ConfigTypes.BOOLEANS, false, "makes Mama(and other forms of Mama) lay mystery eggs.");
+		tattleTextMode = config.getBoolean("tattleTextMode", ConfigTypes.BOOLEANS, false, "makes TattleTail(and other forms of TattleTail) use text instead of voice.");
 	}
 	
 	public static void addInts(){
 		config.getCategory(ConfigTypes.INTS);
+		vaseDropCandlesChance = config.getInt("vaseDropCandlesChance", ConfigTypes.INTS, 25, 0, 100, "sets the chance out of 100 for the vase to drop candles.");
 	}
 	
 	public static Configuration getConfig(){

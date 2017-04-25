@@ -29,6 +29,7 @@ public class MainRegistry {
 	@Mod.Instance(RefStrings.MODID)
 	public static MainRegistry instance;
 	
+	// Version checking instance
 	public static VersionChecker versionChecker;
 	public static boolean haveWarnedVersionOutOfDate = false;
 	
@@ -53,15 +54,12 @@ public class MainRegistry {
 	public static void load(FMLInitializationEvent event){
 		FMLCommonHandler.instance().bus().register(instance);
 		MEventHandler.registerEvents();
-		
-		MainRegistry.versionChecker = new VersionChecker(RefStrings.VERSION,
-				"",
-				RefStrings.NAME);
-		Thread versionCheckThread = new Thread(MainRegistry.versionChecker, "Version Check");
-		versionCheckThread.start();
 	}
 	@EventHandler
 	public static void Postload(FMLPostInitializationEvent PostEvent){
+		MainRegistry.versionChecker = new VersionChecker();
+		Thread versionCheckThread = new Thread(MainRegistry.versionChecker, "Version Check");
+		versionCheckThread.start();
 	}
 	
 	@SubscribeEvent

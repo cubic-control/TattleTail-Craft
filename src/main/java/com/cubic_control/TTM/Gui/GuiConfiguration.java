@@ -25,6 +25,7 @@ public class GuiConfiguration extends GuiConfig{
 	private static List<IConfigElement> getElements() {
 		List<IConfigElement> list = new ArrayList<IConfigElement>();
 		list.add(new ConfigElement(MConfig.config.getCategory(ConfigTypes.BOOLEANS)));
+		list.add(new ConfigElement(MConfig.config.getCategory(ConfigTypes.INTS)));
 		return list;
 	}
 }

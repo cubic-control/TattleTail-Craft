@@ -5,9 +5,9 @@ import com.cubic_control.TTM.Items.MItemManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class CreativeTabAll extends CreativeTabs {
+public class CreativeTabOriginal extends CreativeTabs {
 
-	public CreativeTabAll(String lable) {
+	public CreativeTabOriginal(String lable) {
 		super(lable);
 	}
 

@@ -1,6 +1,7 @@
 package com.cubic_control.TTM.Items;
 
 import com.cubic_control.TTM.Blocks.MBlockManager;
+import com.cubic_control.TTM.CreativeTabs.MCreativeTabs;
 import com.cubic_control.TTM.Lib.RefStrings;
 
 import net.minecraft.entity.Entity;
@@ -10,11 +11,12 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-public class ModItemPapaTattleTail extends ModItemBlockPlacer{
+public class ModItemMamaTattleTail_papa extends ModItemBlockPlacer{
 	String message;
 
-	public ModItemPapaTattleTail(String name, float f1) {
+	public ModItemMamaTattleTail_papa(String name, float f1) {
 		super(name, f1, MBlockManager.papa_TattleTail);
+		this.setCreativeTab(MCreativeTabs.tabCustom);
 	}
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {

@@ -14,7 +14,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 public class ModItemMysteryEgg extends ModItem{
-	public IIcon[] icons = new IIcon[4];
+	public IIcon[] icons = new IIcon[9];
 
 	public ModItemMysteryEgg(String name, float f1) {
 		super(name, f1);
@@ -43,13 +43,13 @@ public class ModItemMysteryEgg extends ModItem{
 	}
 	@Override
 	public void registerIcons(IIconRegister reg) {
-	    for(int i = 0; i < 4; i ++) {
+	    for(int i = 0; i < 9; i ++) {
 	        this.icons[i] = reg.registerIcon(this.iconString + "_" + i);
 	    }
 	}
 	@Override
 	public IIcon getIconFromDamage(int meta) {
-	    if(meta > 3) {
+	    if(meta > 8) {
 	        meta = 0;
 	    }
 	    
@@ -57,7 +57,7 @@ public class ModItemMysteryEgg extends ModItem{
 	}
 	@Override
 	public void getSubItems(Item item, CreativeTabs tab, List list) {
-	    for(int i = 0; i < 4; i ++) {
+	    for(int i = 0; i < 9; i ++) {
 	        list.add(new ItemStack(item, 1, i));
 	    }
 	}

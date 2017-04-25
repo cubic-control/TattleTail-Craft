@@ -10,7 +10,7 @@ public class ModItemFood extends ItemFood{
 	
 	public ModItemFood(int p_i45340_1_, boolean DogFood, String name) {
 		super(p_i45340_1_, DogFood);
-		this.setCreativeTab(MCreativeTabs.tabAll);
+		this.setCreativeTab(MCreativeTabs.tabOriginal);
         this.setUnlocalizedName(name);
         this.setTextureName(RefStrings.MODID + ":" + name);
         GameRegistry.registerItem(this, name);
@@ -18,7 +18,7 @@ public class ModItemFood extends ItemFood{
 	
 	public ModItemFood(int p_i45339_1_, float p_i45339_2_, boolean DogFood, String name){
 		super(p_i45339_1_, p_i45339_2_, DogFood);
-		this.setCreativeTab(MCreativeTabs.tabAll);
+		this.setCreativeTab(MCreativeTabs.tabOriginal);
         this.setUnlocalizedName(name);
         this.setTextureName(RefStrings.MODID + ":" + name);
         GameRegistry.registerItem(this, name);

@@ -18,5 +18,9 @@
       "mama.mamascoming": {
     "category" : "master",
     "sounds" : [ "Mama/mama_bark_mamascoming" ]
+    },
+      "records.mama_story_disc": {
+    "category" : "master",
+    "sounds" : [ "Mama/ruxpin_tape" ]
     }
 }

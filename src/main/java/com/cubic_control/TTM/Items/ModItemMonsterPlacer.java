@@ -46,7 +46,7 @@ public class ModItemMonsterPlacer extends ItemMonsterPlacer
     public ModItemMonsterPlacer(String parEntityToSpawnName, int parPrimaryColor, int parSecondaryColor, String parSpawnName){
         setHasSubtypes(false);
         maxStackSize = 64;
-        setCreativeTab(MCreativeTabs.tabAll);
+        setCreativeTab(MCreativeTabs.tabOriginal);
         setEntityToSpawnName(parEntityToSpawnName);
         colorBase = parPrimaryColor;
         colorSpots = parSecondaryColor;

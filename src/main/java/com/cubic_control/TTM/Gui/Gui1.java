@@ -2,14 +2,13 @@ package com.cubic_control.TTM.Gui;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
-import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
 import com.cubic_control.TTM.Lib.RefStrings;
-import com.cubic_control.cubic_core.Utils.ModUtils;
+import com.cubic_control.cubic_core.Utils.CubicUtils;
 
 public class Gui1 extends Gui{
 	protected static ResourceLocation resource;
@@ -30,7 +29,7 @@ public class Gui1 extends Gui{
 		mc.getTextureManager().bindTexture(resource);
 		double imgWidth = (width + height * this.imgWidthPerHeight) * 0.6;
 		double imgHeight = imgWidth / this.imgWidthPerHeight;
-		ModUtils.drawTexturedRect((width - imgWidth)/2, (height - imgHeight)/2, imgWidth, imgHeight);
+		CubicUtils.drawTexturedRect((width - imgWidth)/2, (height - imgHeight)/2, imgWidth, imgHeight);
 		GL11.glPopMatrix();
 	}
 }

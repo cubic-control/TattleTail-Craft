@@ -1,14 +1,15 @@
 package com.cubic_control.TTM.Events;
 
-import com.cubic_control.TTM.Entity.EntityMama;
-import com.cubic_control.TTM.Lib.RefStrings;
-import com.cubic_control.cubic_core.Utils.ModUtils;
-
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
+
+import com.cubic_control.TTM.Entity.EntityMama;
+import com.cubic_control.TTM.Lib.RefStrings;
+import com.cubic_control.cubic_core.Utils.CubicUtils;
+
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class MEventMamaLightsOut {
 	
@@ -21,7 +22,7 @@ public class MEventMamaLightsOut {
 			int posX = (int) entity.posX;
 			int posY = (int) entity.posY;
 			int posZ = (int) entity.posZ;
-			Block[] blocks = ModUtils.getBlocksAroundPoint(world, posX, posY, posZ);
+			Block[] blocks = CubicUtils.getBlocksAroundPoint(world, posX, posY, posZ);
 			
 			if(!world.isRemote){
 				for(int i = 0; i < blocks.length; i++){

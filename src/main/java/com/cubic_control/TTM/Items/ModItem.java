@@ -15,7 +15,7 @@ public class ModItem extends Item {
 	
 	public ModItem(String name, String TextureName, float f1){
 		this.setUnlocalizedName(name);
-		this.setCreativeTab(MCreativeTabs.tabAll);
+		this.setCreativeTab(MCreativeTabs.tabOriginal);
 		this.setTextureName(RefStrings.MODID + ":" + TextureName);
 		GameRegistry.registerItem(this, name);
 		
@@ -24,7 +24,7 @@ public class ModItem extends Item {
 	
 	public ModItem(String name, float f1){
 		this.setUnlocalizedName(name);
-		this.setCreativeTab(MCreativeTabs.tabAll);
+		this.setCreativeTab(MCreativeTabs.tabOriginal);
 		this.setTextureName(RefStrings.MODID + ":" + name);
 		GameRegistry.registerItem(this, name);
 		

@@ -11,7 +11,7 @@ import net.minecraftforge.common.IExtendedEntityProperties;
 
 import com.cubic_control.cubic_core.Utils.CubicUtils;
 
-public class ModItemRechargeableFlashlight extends ModItem implements ICharge, IExtendedEntityProperties{
+public class ModItemRechargeableFlashlight extends ModItem implements ICharge{
 	private float charge = 0.0f;
 	private float maxCharge;
 
@@ -31,12 +31,6 @@ public class ModItemRechargeableFlashlight extends ModItem implements ICharge, I
 		}
 		super.onUpdate(stack, world, entity, i1, b1);
 	}
-	@Override
-	public void saveNBTData(NBTTagCompound compound) {}
-	@Override
-	public void loadNBTData(NBTTagCompound compound) {}
-	@Override
-	public void init(Entity entity, World world) {}
 	@Override
 	public boolean isOut() {
 		if(this.getChargeFloat() <= 0.0f){

@@ -5,7 +5,7 @@
 -cubic_control: Main coder/modeler			
 -ArturH14: Created a lot of Amazing Textures for the Mod!	
 
-#Copyright	
+# Copyright	
 TERMS AND CONDITIONS 
 0. USED TERMS 
 MOD - modification, plugin, a piece of software that interfaces with the Minecraft client to extend, add, change or remove original capabilities. 

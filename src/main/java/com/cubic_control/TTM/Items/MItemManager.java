@@ -147,9 +147,9 @@ public class MItemManager {
 		withered_TattleTail = new ModItemTattleTail_withered("withered_TattleTail", 1.2f);
 			//Mammas
 		papa_TattleTail = new ModItemMamaTattleTail_papa("papa_MamaTattleTail", 2.5f);
-		choco_mama_TattleTail = new ModItemMamaTattleTail_choco("choco_MamaTattleTail", 2.3f, MBlockManager.ketchup);
-		golden_mama_TattleTail = new ModItemMamaTattleTail_golden("golden_MamaTattleTail", 2.7f, MBlockManager.ketchup);
-		nightmare_mama_TattleTail = new ModItemMamaTattleTail_nightmare("nightmare_MamaTattleTail", 3.2f, MBlockManager.ketchup);
+		choco_mama_TattleTail = new ModItemMamaTattleTail_choco("choco_MamaTattleTail", 2.3f);
+		golden_mama_TattleTail = new ModItemMamaTattleTail_golden("golden_MamaTattleTail", 2.7f);
+		nightmare_mama_TattleTail = new ModItemMamaTattleTail_nightmare("nightmare_MamaTattleTail", 3.2f);
 	}
 
 }

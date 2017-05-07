@@ -1,5 +1,6 @@
 package com.cubic_control.TTM.Items;
 
+import com.cubic_control.TTM.Blocks.MBlockManager;
 import com.cubic_control.TTM.CreativeTabs.MCreativeTabs;
 import com.cubic_control.cubic_core.Bases.BaseBlock;
 
@@ -12,8 +13,8 @@ import net.minecraft.world.World;
 
 public class ModItemMamaTattleTail_nightmare extends ModItemBlockPlacer{
 
-	public ModItemMamaTattleTail_nightmare(String name, float f1, BaseBlock block) {
-		super(name, f1, block);
+	public ModItemMamaTattleTail_nightmare(String name, float f1) {
+		super(name, f1, MBlockManager.nightmare_mama_TattleTail);
 		this.setCreativeTab(MCreativeTabs.tabCustom);
 	}
 	@Override

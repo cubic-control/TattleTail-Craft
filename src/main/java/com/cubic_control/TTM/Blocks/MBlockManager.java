@@ -2,6 +2,9 @@ package com.cubic_control.TTM.Blocks;
 
 import com.cubic_control.TTM.Entity.TileEntity.TileEntityCTattleTail_bendy;
 import com.cubic_control.TTM.Items.MItemManager;
+import com.cubic_control.TTM.Items.ModItemMamaTattleTail_choco;
+import com.cubic_control.TTM.Items.ModItemMamaTattleTail_golden;
+import com.cubic_control.TTM.Items.ModItemMamaTattleTail_nightmare;
 import com.cubic_control.cubic_core.Bases.BaseBlock;
 
 import net.minecraft.block.Block;
@@ -42,6 +45,9 @@ public class MBlockManager {
 	public static BaseBlock withered_TattleTail;
 		//Mammas
 	public static BaseBlock papa_TattleTail;
+	public static BaseBlock choco_mama_TattleTail;
+	public static BaseBlock golden_mama_TattleTail;
+	public static BaseBlock nightmare_mama_TattleTail;
 
 	public static void createBlocks() {
 		purple_TattleTail = new ModBlockTattleTail("TattleTail_purple");
@@ -51,7 +57,6 @@ public class MBlockManager {
 		nightnight_TattleTail = new ModBlockTattleTail("TattleTail_nightnight");
 		butternut_TattleTail = new ModBlockTattleTail("TattleTail_butternut");
 		mama_TattleTail = new ModBlockMama("TattleTail_mama");
-		papa_TattleTail = new ModBlockPapa("TattleTail_papa");
 		ketchup = new ModBlockKetchup("Ketchup_block");
 		present = new ModBlockPresent("present_block");
 		candles = new ModBlockCandles("candles_block");
@@ -77,6 +82,11 @@ public class MBlockManager {
 		shadow_TattleTail = new ModBlockCTattleTail("TattleTail_shadow");
 		spring_TattleTail = new ModBlockCTattleTail("TattleTail_spring");
 		withered_TattleTail = new ModBlockCTattleTail("TattleTail_withered");
+			//Mammas
+		papa_TattleTail = new ModBlockCMama("TattleTail_papa");
+		choco_mama_TattleTail = new ModBlockCMama("MamaTattleTail_choco");
+		golden_mama_TattleTail = new ModBlockCMama("MamaTattleTail_golden");
+		nightmare_mama_TattleTail = new ModBlockCMama("MamaTattleTail_nightmare");
 	}
 
 }

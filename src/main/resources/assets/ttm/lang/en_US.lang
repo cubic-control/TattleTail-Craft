@@ -19,6 +19,7 @@ item.mama_story_disc.name=Mama Story Disc
 item.record.mama_story_disc.desc=
 item.cupcakes.name=Cupcakes
 item.present.name=Present
+item.vase.name=Vase
         //Mystery Egg Drops
 item.Bandage.name=Bandage
 item.Broken Crayon.name=Broken Crayon
@@ -44,6 +45,10 @@ item.Seashells Soap.name=Seashells Soap
 item.Used Bandage.name=Used Bandage
 
 item.spawn_egg_mama.name=Spawn Mama
+item.spawn_egg_papa.name=Spawn Papa
+item.spawn_egg_mama_choco.name=Spawn Choco Mama
+item.spawn_egg_mama_golden.name=Spawn Golden Mama
+item.spawn_egg_mama_nightmare.name=Spawn Nightmare Mama
     //Custom
 item.cPresent.name=Present
         //TattleTails
@@ -60,10 +65,16 @@ item.lol_TattleTail.name=Lolbit TattleTail
 item.neighbor_TattleTail.name=Neighbor TattleTail
 item.pumpkin_TattleTail.name=Pumpkin TattleTail
 item.red_TattleTail.name=Red TattleTail
+item.sans_TattleTail.name=Sans TattleTail
 item.scott_TattleTail.name=Scott Cawthon TattleTail
 item.shadow_TattleTail.name=Shadow TattleTail
 item.spring_TattleTail.name=Springtrap TattleTail
 item.withered_TattleTail.name=Withered Purple TattleTail
+    //Mammas
+item.papa_MamaTattleTail.name=Papa TattleTail
+item.choco_MamaTattleTail.name=Choco Mama TattleTail
+item.golden_MamaTattleTail.name=Golden Mama TattleTail
+item.nightmare_MamaTattleTail.name=Nightmare Mama TattleTail
 
 //Blocks
 tile.TattleTail_purple.name=Purple TattleTail Block
@@ -74,6 +85,7 @@ tile.TattleTail_nightnight.name=Nightnight TattleTail Block
 tile.TattleTail_butternut.name=Butternut TattleTail Block
 tile.TattleTail_mama.name=Mama TattleTail Block
 tile.Ketchup_block.name=Ketchup
+tile.vase_block.name=Vase
 
 //CreativeTabs
 itemGroup.ttm:tabOriginal=TattleTail-Craft:Original
@@ -81,3 +93,7 @@ itemGroup.ttm:tabCustom=TattleTail-Craft:Custom
 
 //Entity
 entity.ttm.Mama.name=Mama
+entity.ttm.Papa.name=Papa
+entity.ttm.Mama_choco.name=Choco Mama
+entity.ttm.Mama_golden.name=Golden Mama
+entity.ttm.Mama_nightmare.name=Nightmare Mama

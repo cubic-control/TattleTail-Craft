@@ -12,7 +12,6 @@ public class MTileEntity {
 		GameRegistry.registerTileEntity(TileEntityTattleTail_nightnight.class, "TattleTail_nightnight");
 		GameRegistry.registerTileEntity(TileEntityTattleTail_butternut.class, "TattleTail_butternut");
 		GameRegistry.registerTileEntity(TileEntityMama.class, "Mama");
-		GameRegistry.registerTileEntity(TileEntityPapa.class, "Papa");
 		GameRegistry.registerTileEntity(TileEntityKetchup.class, "Ketchup");
 		GameRegistry.registerTileEntity(TileEntityPresent.class, "present");
 		GameRegistry.registerTileEntity(TileEntityCandles.class, "candles");
@@ -38,6 +37,11 @@ public class MTileEntity {
 		GameRegistry.registerTileEntity(TileEntityCTattleTail_shadow.class, "CTattleTail_shadow");
 		GameRegistry.registerTileEntity(TileEntityCTattleTail_spring.class, "CTattleTail_spring");
 		GameRegistry.registerTileEntity(TileEntityCTattleTail_withered.class, "CTattleTail_withered");
+			//Mammas
+		GameRegistry.registerTileEntity(TileEntityPapa.class, "Papa");
+		GameRegistry.registerTileEntity(TileEntityCMamaTattleTail_choco.class, "Choco_Mama");
+		GameRegistry.registerTileEntity(TileEntityCMamaTattleTail_golden.class, "Golden_Mama");
+		GameRegistry.registerTileEntity(TileEntityCMamaTattleTail_nightmare.class, "Nightmare_Mama");
 	}
 
 }

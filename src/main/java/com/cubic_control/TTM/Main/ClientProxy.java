@@ -34,6 +34,7 @@ import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_nightnight;
 import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_purple;
 import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_snowglobe;
 import com.cubic_control.TTM.Entity.TileEntity.TileEntityTattleTail_yellow;
+import com.cubic_control.TTM.Entity.TileEntity.TileEntityVase;
 import com.cubic_control.TTM.Models.ModelBiped64x64;
 import com.cubic_control.TTM.Render.RenderCPresent;
 import com.cubic_control.TTM.Render.RenderCTattletail_bendy;
@@ -69,6 +70,7 @@ import com.cubic_control.TTM.Render.RenderTattletail_nightnight;
 import com.cubic_control.TTM.Render.RenderTattletail_purple;
 import com.cubic_control.TTM.Render.RenderTattletail_snowglobe;
 import com.cubic_control.TTM.Render.RenderTattletail_yellow;
+import com.cubic_control.TTM.Render.RenderVase;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -101,6 +103,7 @@ public class ClientProxy extends ServerProxy{
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTattleTail_yellow.class, new RenderTattletail_yellow());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMama.class, new RenderMama_Tattletail());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCandles.class, new RenderCandles());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityVase.class, new RenderVase());
 		//Custom
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCPresent.class, new RenderCPresent());
 			//TattleTails
